@@ -1,0 +1,15 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins" as m;
+@use "../abstracts/funcions" as f;
+.btn {
+    width: f.rem(210px);
+    height: f.rem(52px);
+    background-color: variables.$color-black;
+    color: variables.$color-white-primary;
+    border: none;
+    border-radius: f.rem(62px);
+    font-family: variables.$font-secondary;
+    font-weight: 500;
+    font-size: f.rem(16px);
+    padding: f.rem(16px) f.rem(54px);
+}
