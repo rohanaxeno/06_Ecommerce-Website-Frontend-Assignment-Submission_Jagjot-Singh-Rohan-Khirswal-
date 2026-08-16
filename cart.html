@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cart</title>
+        <link rel="stylesheet" href="./css/main.css" />
+    </head>
+    <body>
+        <header class="header">
+            <nav class="header__nav-primary">
+                <div class="header__nav-container">
+                    <span
+                        >Sign up and get 20% off to your first order.
+                        <a href="" class="header__nav-content">Sign Up Now</a>
+                    </span>
+                    <img
+                        src="./assets/icons/navbar icons/close.svg"
+                        alt="close-icon"
+                        class="header__nav-icon"
+                    />
+                </div>
+            </nav>
+            <nav class="header__nav-secondary">
+                <div class="header__nav-secondary-container">
+                    <div class="header__nav-mobile-icon">☰</div>
+                    <span class="logo">SHOP.CO</span>
+                    <ul class="header__nav-links">
+                        <li class="drop-down-icon">
+                            <a href=""><span>Shop</span> </a>
+                            <img
+                                src="./assets/icons/navbar icons/drop-down-arrow.svg"
+                                alt="drop-down-icon"
+                            />
+                        </li>
+                        <li><a href="">On Sale</a></li>
+                        <li><a href="">New Arrivals</a></li>
+                        <li><a href="">Brands</a></li>
+                    </ul>
+                    <div class="search">
+                        <button class="search__button">
+                            <img
+                                src="./assets/icons/navbar icons/search-icon.svg"
+                                alt="search-icon"
+                            />
+                        </button>
+                        <input
+                            type="text"
+                            class="search__input"
+                            placeholder="Search for products"
+                        />
+                    </div>
+                    <div class="header__nav-secondary-icons">
+                        <img
+                            src="./assets/icons/navbar icons/search-icon.svg"
+                            alt="search-icon"
+                            class="search-icon"
+                        />
+                        <img
+                            src="./assets/icons/navbar icons/card-icon.svg"
+                            alt="cart-icon"
+                        />
+                        <img
+                            src="./assets/icons/navbar icons/account-icon.svg"
+                            alt="account icon"
+                        />
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="cart">
+            <h1 class="cart__heading">YOUR CART</h1>
+
+            <div class="cart__content">
+                <section class="cart__items">
+                    <article class="cart-item">
+                        <div class="cart-item__image">
+                            <img src="" alt="" />
+                        </div>
+
+                        <div class="cart-item__details">
+                            <h2 class="cart-item__name"></h2>
+
+                            <p class="cart-item__size">Size: <span></span></p>
+
+                            <p class="cart-item__color">Color: <span></span></p>
+
+                            <p class="cart-item__price"></p>
+                        </div>
+
+                        <button class="cart-item__remove" type="button">
+                            <img
+                                src="./assets/icons/cart-page-icons/Vector (4).svg"
+                                alt="remove-icon"
+                            />
+                        </button>
+
+                        <div class="cart-item__quantity">
+                            <button
+                                class="cart-item__quantity-button cart-item__decrease"
+                                type="button"
+                            >
+                                -
+                            </button>
+
+                            <span class="cart-item__quantity-value">1</span>
+
+                            <button
+                                class="cart-item__quantity-button cart-item__increase"
+                                type="button"
+                            >
+                                +
+                            </button>
+                        </div>
+                    </article>
+                </section>
+
+                <aside class="cart__summary">
+                    <h2 class="cart__summary-title">Order Summary</h2>
+
+                    <div class="cart__summary-row">
+                        <span>Subtotal</span>
+                        <strong class="cart__subtotal">₹0</strong>
+                    </div>
+
+                    <div class="cart__summary-row">
+                        <span>Discount</span>
+                        <strong class="cart__discount">-₹0</strong>
+                    </div>
+
+                    <div class="cart__summary-row">
+                        <span>Delivery Fee</span>
+                        <strong class="cart__delivery">₹15</strong>
+                    </div>
+
+                    <hr class="cart__summary-line" />
+
+                    <div class="cart__summary-row cart__summary-total">
+                        <span>Total</span>
+                        <strong class="cart__total">₹0</strong>
+                    </div>
+
+                    <div class="cart__coupon">
+                        <input
+                            type="text"
+                            class="cart__coupon-input"
+                            placeholder="Add promo code"
+                        />
+
+                        <button type="button" class="cart__coupon-button">
+                            Apply
+                        </button>
+                    </div>
+
+                    <p class="cart__coupon-message"></p>
+
+                    <button type="button" class="cart__checkout">
+                        <span>Go to Checkout</span>
+                        <span>→</span>
+                    </button>
+                </aside>
+            </div>
+        </main>
+
+        <div class="cart__success">
+            <div class="cart__success-box">
+                <h2>Order Successful</h2>
+
+                <p>Your order has been placed successfully.</p>
+
+                <button type="button" class="cart__success-close">
+                    Continue Shopping
+                </button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <!-- Newsletter -->
+            <section class="newsletter">
+                <div class="newsletter__content">
+                    <h2 class="newsletter__heading">
+                        STAY UPTO DATE ABOUT<br />
+                        OUR LATEST OFFERS
+                    </h2>
+
+                    <form class="newsletter__form">
+                        <div class="newsletter__input">
+                            <span class="newsletter__icon">✉</span>
+
+                            <input
+                                type="email"
+                                class="newsletter__input-field"
+                                placeholder="Enter your email address"
+                            />
+                        </div>
+
+                        <button type="submit" class="newsletter__button">
+                            Subscribe to Newsletter
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <h2 class="footer__logo">SHOP.CO</h2>
+
+                    <p class="footer__description">
+                        We have clothes that suits your style and which you're
+                        proud to wear. From women to men.
+                    </p>
+
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social"
+                            ><img
+                                src="./assets/icons/social-icons/logo-twitter 2.svg"
+                                alt="twitter-icon"
+                        /></a>
+                        <a href="#" class="footer__social facebook"
+                            ><img
+                                src="./assets/icons/social-icons/Group.svg"
+                                alt="facebook-icon"
+                        /></a>
+                        <a href="#" class="footer__social"
+                            ><img
+                                src="./assets/icons/social-icons/logo-instagram 1.svg"
+                                alt="insta-icon"
+                        /></a>
+                        <a href="#" class="footer__social"
+                            ><img
+                                src="./assets/icons/social-icons/Group (1).svg"
+                                alt="reddit-icon"
+                        /></a>
+                    </div>
+                </div>
+
+                <!-- Company -->
+                <div class="footer__column">
+                    <h3 class="footer__title">COMPANY</h3>
+
+                    <a href="#" class="footer__link">About</a>
+                    <a href="#" class="footer__link">Features</a>
+                    <a href="#" class="footer__link">Works</a>
+                    <a href="#" class="footer__link">Career</a>
+                </div>
+
+                <!-- Help -->
+                <div class="footer__column">
+                    <h3 class="footer__title">HELP</h3>
+
+                    <a href="#" class="footer__link">Customer Support</a>
+                    <a href="#" class="footer__link">Delivery Details</a>
+                    <a href="#" class="footer__link">Terms &amp; Conditions</a>
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                </div>
+
+                <!-- FAQ -->
+                <div class="footer__column">
+                    <h3 class="footer__title">FAQ</h3>
+
+                    <a href="#" class="footer__link">Account</a>
+                    <a href="#" class="footer__link">Manage Deliveries</a>
+                    <a href="#" class="footer__link">Orders</a>
+                    <a href="#" class="footer__link">Payments</a>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer__column">
+                    <h3 class="footer__title">RESOURCES</h3>
+
+                    <a href="#" class="footer__link">Free eBooks</a>
+                    <a href="#" class="footer__link">Development Tutorial</a>
+                    <a href="#" class="footer__link">How to - Blog</a>
+                    <a href="#" class="footer__link">Youtube Playlist</a>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    Shop.co © 2000-2023, All Rights Reserved
+                </p>
+
+                <div class="footer__payments">
+                    <span class="footer__payment"
+                        ><img
+                            src="./assets/icons/social-icons/paymenticons/Visa.svg"
+                            alt="visa"
+                    /></span>
+                    <span class="footer__payment"
+                        ><img
+                            src="./assets/icons/social-icons/paymenticons/Mastercard.svg"
+                            alt="Mastercard"
+                    /></span>
+                    <span class="footer__payment"
+                        ><img
+                            src="./assets/icons/social-icons/paymenticons/Paypal.svg"
+                            alt="Paypal"
+                    /></span>
+                    <span class="footer__payment"
+                        ><img
+                            src="./assets/icons/social-icons/paymenticons/ Pay.svg"
+                            alt="applepay"
+                    /></span>
+                    <span class="footer__payment"
+                        ><img
+                            src="./assets/icons/social-icons/paymenticons/G Pay.svg"
+                            alt="gpay"
+                    /></span>
+                </div>
+            </div>
+        </footer>
+
+        <script type="module" src="./js/cart.js"></script>
+    </body>
+</html>

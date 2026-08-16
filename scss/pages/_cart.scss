@@ -1,0 +1,412 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins" as m;
+@use "../abstracts/funcions" as f;
+.cart {
+    width: 100%;
+    max-width: f.rem(1240px);
+    margin: 0 auto;
+    padding: f.rem(40px) 0;
+
+    &__heading {
+        font-family: variables.$font-primary;
+        font-size: f.rem(40px);
+        line-height: 1;
+        font-weight: 700;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1.6fr 1fr;
+        gap: f.rem(20px);
+        align-items: start;
+    }
+
+    &__items {
+        border: 1px solid variables.$color-light-gray;
+        border-radius: f.rem(20px);
+        padding: f.rem(20px);
+    }
+
+    &__summary {
+        border: 1px solid variables.$color-light-gray;
+        border-radius: f.rem(20px);
+        padding: f.rem(24px);
+    }
+
+    &__summary-title {
+        margin: 0 0 f.rem(24px);
+
+        font-family: variables.$font-primary;
+        font-size: f.rem(24px);
+        line-height: 1;
+        font-weight: 700;
+    }
+
+    &__summary-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: f.rem(20px);
+
+        font-family: variables.$font-secondary;
+        font-size: f.rem(16px);
+
+        span {
+            color: variables.$color-light-gray;
+        }
+
+        strong {
+            color: variables.$color-black;
+            font-weight: 500;
+        }
+    }
+
+    &__summary-total {
+        margin-bottom: f.rem(24px);
+
+        span {
+            color: variables.$color-black;
+            font-size: f.rem(18px);
+        }
+
+        strong {
+            font-size: f.rem(20px);
+            font-weight: 700;
+        }
+    }
+
+    &__summary-line {
+        margin: f.rem(4px) 0 f.rem(24px);
+        border: none;
+        border-top: 1px solid variables.$color-light-gray;
+    }
+
+    &__coupon {
+        display: flex;
+        gap: f.rem(12px);
+        margin-bottom: f.rem(10px);
+    }
+
+    &__coupon-input {
+        width: 100%;
+        height: f.rem(48px);
+
+        padding: 0 f.rem(18px);
+
+        border: none;
+        border-radius: f.rem(24px);
+        outline: none;
+
+        background-color: variables.$bg-color-card;
+
+        font-family: variables.$font-secondary;
+        font-size: f.rem(14px);
+
+        &::placeholder {
+            color: variables.$color-light-gray;
+        }
+    }
+
+    &__coupon-button {
+        width: f.rem(110px);
+        height: f.rem(48px);
+
+        border: none;
+        border-radius: f.rem(24px);
+
+        background-color: variables.$color-black;
+        color: variables.$color-white;
+
+        font-family: variables.$font-secondary;
+        font-size: f.rem(14px);
+
+        cursor: pointer;
+    }
+
+    &__coupon-message {
+        min-height: f.rem(18px);
+        margin: 0 0 f.rem(16px);
+
+        font-family: variables.$font-secondary;
+        font-size: f.rem(12px);
+    }
+
+    &__checkout {
+        width: 100%;
+        height: f.rem(52px);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 0 f.rem(24px);
+
+        border: none;
+        border-radius: f.rem(26px);
+
+        background-color: variables.$color-black;
+        color: variables.$color-white;
+
+        font-family: variables.$font-secondary;
+        font-size: f.rem(14px);
+
+        cursor: pointer;
+    }
+
+    &__success {
+        position: fixed;
+        inset: 0;
+
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        background-color: rgba(0, 0, 0, 0.5);
+
+        z-index: 1000;
+    }
+
+    &__success-box {
+        width: f.rem(400px);
+        padding: f.rem(32px);
+
+        border-radius: f.rem(20px);
+
+        background-color: variables.$color-white;
+
+        text-align: center;
+
+        h2 {
+            margin: 0 0 f.rem(12px);
+
+            font-family: variables.$font-primary;
+            font-size: f.rem(28px);
+        }
+
+        p {
+            margin: 0 0 f.rem(24px);
+
+            font-family: variables.$font-secondary;
+            font-size: f.rem(14px);
+            color: variables.$color-light-gray;
+        }
+    }
+
+    &__success-close {
+        width: 100%;
+        height: f.rem(48px);
+
+        border: none;
+        border-radius: f.rem(24px);
+
+        background-color: variables.$color-black;
+        color: variables.$color-white;
+
+        cursor: pointer;
+    }
+}
+.cart-item {
+    display: grid;
+    grid-template-columns: f.rem(124px) 1fr auto;
+    gap: f.rem(20px);
+    padding: f.rem(20px) 0;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid variables.$color-light-gray;
+    }
+
+    &__image {
+        width: f.rem(124px);
+        height: f.rem(124px);
+
+        border-radius: f.rem(12px);
+        overflow: hidden;
+        background-color: variables.$bg-color-card;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__name {
+        margin: 0 0 f.rem(8px);
+        font-family: variables.$font-primary;
+        font-size: f.rem(18px);
+        font-weight: 600;
+    }
+
+    &__size,
+    &__color {
+        margin: 0 0 f.rem(6px);
+        font-size: f.rem(14px);
+
+        span {
+            color: variables.$color-light-gray;
+        }
+    }
+
+    &__price {
+        margin-top: f.rem(12px);
+        font-size: f.rem(20px);
+        font-weight: 600;
+    }
+
+    &__remove {
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        img {
+            width: f.rem(20px);
+        }
+    }
+
+    &__quantity {
+        display: flex;
+        align-items: center;
+        gap: f.rem(18px);
+
+        width: fit-content;
+        padding: f.rem(10px) f.rem(14px);
+
+        border-radius: f.rem(20px);
+        background-color: variables.$bg-color-card;
+    }
+
+    &__quantity-button {
+        border: none;
+        background: none;
+        font-size: f.rem(18px);
+        cursor: pointer;
+    }
+
+    &__quantity-value {
+        font-size: f.rem(14px);
+    }
+}
+
+@media (max-width: 390px) {
+    .cart {
+        width: calc(100% - 2rem);
+        padding: f.rem(24px) 0 f.rem(40px);
+
+        &__heading {
+            margin-bottom: f.rem(20px);
+            font-size: f.rem(30px);
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: f.rem(20px);
+        }
+
+        &__items {
+            padding: f.rem(12px) f.rem(16px);
+            border-radius: f.rem(16px);
+        }
+
+        &__summary {
+            padding: f.rem(20px);
+            border-radius: f.rem(16px);
+        }
+
+        &__summary-title {
+            margin-bottom: f.rem(20px);
+            font-size: f.rem(20px);
+        }
+
+        &__summary-row {
+            margin-bottom: f.rem(16px);
+            font-size: f.rem(14px);
+        }
+
+        &__summary-total {
+            margin-bottom: f.rem(20px);
+
+            span {
+                font-size: f.rem(16px);
+            }
+
+            strong {
+                font-size: f.rem(18px);
+            }
+        }
+
+        &__coupon {
+            gap: f.rem(8px);
+        }
+
+        &__coupon-input {
+            height: f.rem(44px);
+            padding: 0 f.rem(16px);
+            font-size: f.rem(12px);
+        }
+
+        &__coupon-button {
+            width: f.rem(90px);
+            height: f.rem(44px);
+            font-size: f.rem(12px);
+        }
+
+        &__checkout {
+            height: f.rem(48px);
+            padding: 0 f.rem(20px);
+            font-size: f.rem(13px);
+        }
+    }
+
+    .cart-item {
+        grid-template-columns: f.rem(80px) 1fr auto;
+        gap: f.rem(12px);
+        padding: f.rem(16px) 0;
+
+        &__image {
+            width: f.rem(80px);
+            height: f.rem(80px);
+        }
+
+        &__name {
+            margin-bottom: f.rem(6px);
+            font-size: f.rem(14px);
+        }
+
+        &__size,
+        &__color {
+            margin-bottom: f.rem(4px);
+            font-size: f.rem(12px);
+        }
+
+        &__price {
+            margin-top: f.rem(8px);
+            font-size: f.rem(16px);
+        }
+
+        &__remove {
+            img {
+                width: f.rem(16px);
+            }
+        }
+
+        &__quantity {
+            gap: f.rem(12px);
+            padding: f.rem(6px) f.rem(10px);
+        }
+
+        &__quantity-button {
+            font-size: f.rem(16px);
+        }
+
+        &__quantity-value {
+            font-size: f.rem(12px);
+        }
+    }
+
+    .cart__success-box {
+        width: calc(100% - 3rem);
+        padding: f.rem(24px);
+    }
+}

@@ -87,20 +87,20 @@ thumbnails.forEach((thumbnail) => {
 colors.forEach((color) => {
     color.addEventListener("click", () => {
         colors.forEach((item) => {
-            item.classList.remove("selected");
+            item.classList.remove("active");
         });
 
-        color.classList.add("selected");
+        color.classList.add("active");
     });
 });
 
 sizes.forEach((size) => {
     size.addEventListener("click", () => {
         sizes.forEach((item) => {
-            item.classList.remove("selected");
+            item.classList.remove("active");
         });
 
-        size.classList.add("selected");
+        size.classList.add("active");
     });
 });
 
@@ -120,11 +120,11 @@ plusButton.addEventListener("click", () => {
 
 addToCartButton.addEventListener("click", () => {
     const selectedColor = document.querySelector(
-        ".product-details__color.selected",
+        ".product-details__color.active",
     );
 
     const selectedSize = document.querySelector(
-        ".product-details__size.selected",
+        ".product-details__size.active",
     );
 
     const cartItem = {
@@ -133,7 +133,7 @@ addToCartButton.addEventListener("click", () => {
         price: product.price,
         image: product.image,
         quantity: quantity,
-        color: selectedColor ? selectedColor.dataset.color : null,
+        color: selectedColor ? selectedColor.classList[1] : null,
         size: selectedSize ? selectedSize.textContent.trim() : null,
     };
 
