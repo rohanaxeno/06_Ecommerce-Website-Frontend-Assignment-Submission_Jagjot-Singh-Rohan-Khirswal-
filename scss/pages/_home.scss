@@ -1,0 +1,66 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins" as m;
+@use "../abstracts/funcions" as f;
+
+.product-card-section {
+    width: 100%;
+    @include m.flex(column, center, center);
+
+    &__heading {
+        font-family: variables.$font-primary;
+        font-size: f.rem(48px);
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .product-card__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: f.rem(20px);
+    }
+
+    .product-card {
+        width: f.rem(295px);
+        font-family: variables.$font-secondary;
+        display: flex;
+        flex-direction: column;
+        row-gap: f.rem(8px);
+    }
+    .product-card__image {
+        width: 100%;
+        height: f.rem(298px);
+        background-color: variables.$bg-color-card;
+        border-radius: f.rem(20px);
+    }
+    .product-card__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: f.rem(20px);
+    }
+    .product-card__title {
+        font-size: f.rem(20px);
+        margin: 0;
+        padding: 0;
+    }
+    .product-card__price {
+        font-family: variables.$font-secondary;
+        font-size: f.rem(24px);
+        font-weight: 700;
+    }
+
+    .product-card__old-price {
+        text-decoration: line-through;
+        color: variables.$color-light-gray;
+    }
+    .product-card__price .product-card__discount {
+        width: f.rem(58px);
+        height: f.rem(28px);
+        border-radius: 62px;
+        color: variables.$color-red;
+        background-color: variables.$bg-red;
+        font-size: f.rem(12px);
+        font-weight: 500;
+        padding: f.rem(6px) f.rem(13px);
+    }
+}
