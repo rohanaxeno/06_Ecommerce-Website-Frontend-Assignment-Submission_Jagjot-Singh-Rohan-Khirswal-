@@ -12,4 +12,14 @@
     font-weight: 500;
     font-size: f.rem(16px);
     padding: f.rem(16px) f.rem(54px);
+    cursor: pointer;
+}
+
+.btn-secondary {
+    @extend .btn;
+    width: f.rem(218px);
+    height: f.rem(52px);
+    border: 1px solid #00000020;
+    background: transparent;
+    color: variables.$color-black;
 }

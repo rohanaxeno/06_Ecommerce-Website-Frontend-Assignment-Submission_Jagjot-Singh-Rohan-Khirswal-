@@ -5,6 +5,7 @@
 .product-card-section {
     width: 100%;
     @include m.flex(column, center, center);
+    row-gap: f.rem(36px);
 
     &__heading {
         font-family: variables.$font-primary;
@@ -62,5 +63,297 @@
         font-size: f.rem(12px);
         font-weight: 500;
         padding: f.rem(6px) f.rem(13px);
+    }
+
+    hr {
+        width: f.rem(1240px);
+        border: 1px solid #00000021;
+    }
+}
+
+.dress-style {
+    width: calc(100% - f.rem(100px));
+    max-width: f.rem(1239px);
+    margin: f.rem(64px) auto;
+    padding: f.rem(70px) f.rem(64px);
+    background-color: variables.$color-white-primary;
+    border-radius: f.rem(40px);
+
+    &__heading {
+        margin: 0;
+        padding: 0;
+        font-family: variables.$font-primary;
+        font-size: f.rem(48px);
+        font-weight: 700;
+        text-align: center;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        grid-template-rows: repeat(2, f.rem(289px));
+        gap: f.rem(20px);
+        margin: f.rem(64px) 0;
+    }
+    &__card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: f.rem(20px);
+        background-color: variables.$color-white;
+
+        h3 {
+            position: absolute;
+            top: f.rem(25px);
+            left: f.rem(36px);
+            z-index: 2;
+            margin: 0;
+            font-family: variables.$font-secondary;
+            font-size: f.rem(36px);
+            font-weight: 700;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        &--casual {
+            grid-column: 1;
+        }
+
+        &--formal {
+            grid-column: 2;
+        }
+
+        &--party {
+            grid-column: 1 / 2;
+        }
+
+        &--gym {
+            grid-column: 2;
+        }
+    }
+}
+.testimonials {
+    max-width: 80rem;
+    margin: 4rem auto;
+
+    &__header {
+        @include m.flex(row, space-between);
+        margin-bottom: f.rem(40px);
+    }
+
+    &__heading {
+        font-family: variables.$font-primary;
+        margin: 0;
+        font-size: f.rem(48px);
+        line-height: 100%;
+        font-weight: 700;
+    }
+
+    &__controls {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__button {
+        width: f.rem(24px);
+        height: f.rem(24px);
+        padding: 0;
+        border: 0;
+        background: transparent;
+
+        cursor: pointer;
+    }
+
+    &__track {
+        font-family: variables.$font-secondary;
+        display: flex;
+        gap: f.rem(20px);
+        overflow: hidden;
+    }
+}
+
+.testimonial-card {
+    flex: 0 0 calc((100%) / 3.7);
+    height: f.rem(183.58px);
+    padding: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+
+    &__rating {
+        margin-bottom: 0.5rem;
+        color: #ffc633;
+        font-size: 1rem;
+        letter-spacing: 0%;
+    }
+
+    &__name {
+        margin-bottom: 0.75rem;
+        font-size: f.rem(20px);
+        font-weight: 700;
+
+        span {
+            width: f.rem(24px);
+            height: f.rem(24px);
+            display: inline-block;
+
+            text-align: center;
+            border-radius: 50%;
+            background-color: variables.$color-green;
+            color: white;
+            font-size: 1rem;
+        }
+    }
+
+    &__text {
+        color: variables.$color-light-gray;
+        font-size: f.rem(16px);
+    }
+}
+
+@media (max-width: 390px) {
+    .product-card-section {
+        width: 100%;
+        overflow: hidden;
+        margin-left: f.rem(16px);
+
+        &__heading {
+            font-size: f.rem(32px);
+        }
+
+        .product-card__grid {
+            width: 100%;
+            @include m.flex(row);
+            gap: 1.5rem;
+
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            padding: 0 1.4rem 0 1.4rem;
+
+            scroll-behavior: smooth;
+
+            scrollbar-width: none;
+        }
+
+        .product-card__grid .product-card {
+            flex: 0 0 21rem;
+        }
+
+        .product-card__image {
+            width: 100%;
+            height: 21rem;
+        }
+
+        .product-card__title {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+
+        .product-card__rating {
+            font-size: 1rem;
+        }
+
+        .product-card__price {
+            font-size: 1.5rem;
+        }
+
+        .product-card-section__viewAllButton1,
+        .product-card-section__viewAllButton2 {
+            width: f.rem(358px);
+            height: f.rem(46px);
+        }
+    }
+    .dress-style {
+        margin: f.rem(50px) auto;
+        padding: f.rem(40px) f.rem(56px);
+        border-radius: f.rem(20px);
+
+        &__heading {
+            font-size: f.rem(32px);
+            line-height: f.rem(36px);
+        }
+
+        &__grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        &__card {
+            width: 100%;
+            height: f.rem(190px);
+            border-radius: f.rem(20px);
+
+            h3 {
+                top: f.rem(16px);
+                left: f.rem(24px);
+                font-size: f.rem(24px);
+            }
+
+            img {
+                object-fit: cover;
+            }
+
+            &--casual,
+            &--formal,
+            &--party &--gym {
+                grid-column: auto;
+            }
+        }
+    }
+    .testimonials {
+        width: calc(100% - 2rem);
+        margin: 3rem auto;
+
+        &__header {
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+
+        &__heading {
+            font-size: 2rem;
+            line-height: 1.05;
+        }
+
+        &__controls {
+            gap: 0.5rem;
+        }
+
+        &__button {
+            width: 1.5rem;
+            height: 1.5rem;
+
+            font-size: 1rem;
+        }
+
+        &__track {
+            display: flex;
+            overflow-x: scroll;
+            scrollbar-width: none;
+        }
+    }
+
+    .testimonial-card {
+        flex: 0 0 88%;
+
+        border-radius: 0.75rem;
+
+        &__rating {
+            font-size: 1rem;
+        }
+
+        &__name {
+            font-size: f.rem(20px);
+        }
+
+        &__text {
+            font-size: 1rem;
+            line-height: f.rem(20px);
+        }
     }
 }

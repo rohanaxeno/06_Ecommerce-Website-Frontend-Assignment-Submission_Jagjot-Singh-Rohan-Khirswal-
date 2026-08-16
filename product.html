@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PorductS</title>
+        <link rel="stylesheet" href="./css/main.css" />
+    </head>
+    <body>
+        <header class="header">
+            <nav class="header__nav-primary">
+                <div class="header__nav-container">
+                    <span
+                        >Sign up and get 20% off to your first order.
+                        <a href="" class="header__nav-content">Sign Up Now</a>
+                    </span>
+                    <img
+                        src="./assets/icons/navbar icons/close.svg"
+                        alt="close-icon"
+                        class="header__nav-icon"
+                    />
+                </div>
+            </nav>
+            <nav class="header__nav-secondary">
+                <div class="header__nav-secondary-container">
+                    <div class="header__nav-mobile-icon">☰</div>
+                    <span class="logo">SHOP.CO</span>
+                    <ul class="header__nav-links">
+                        <li class="drop-down-icon">
+                            <a href=""><span>Shop</span> </a>
+                            <img
+                                src="./assets/icons/navbar icons/drop-down-arrow.svg"
+                                alt="drop-down-icon"
+                            />
+                        </li>
+                        <li><a href="">On Sale</a></li>
+                        <li><a href="">New Arrivals</a></li>
+                        <li><a href="">Brands</a></li>
+                    </ul>
+                    <div class="search">
+                        <button class="search__button">
+                            <img
+                                src="./assets/icons/navbar icons/search-icon.svg"
+                                alt="search-icon"
+                            />
+                        </button>
+                        <input
+                            type="text"
+                            class="search__input"
+                            placeholder="Search for products"
+                        />
+                    </div>
+                    <div class="header__nav-secondary-icons">
+                        <img
+                            src="./assets/icons/navbar icons/search-icon.svg"
+                            alt="search-icon"
+                            class="search-icon"
+                        />
+                        <img
+                            src="./assets/icons/navbar icons/card-icon.svg"
+                            alt="cart-icon"
+                        />
+                        <img
+                            src="./assets/icons/navbar icons/account-icon.svg"
+                            alt="account icon"
+                        />
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="product-details">
+            <div class="product-details__gallery">
+                <div class="product-details__thumbnails">
+                    <button class="product-details__thumbnail">
+                        <img src="" alt="Product image 1" />
+                    </button>
+
+                    <button class="product-details__thumbnail">
+                        <img src="" alt="Product image 2" />
+                    </button>
+
+                    <button class="product-details__thumbnail">
+                        <img src="" alt="Product image 3" />
+                    </button>
+                </div>
+
+                <!-- Main image -->
+                <div class="product-details__main-image">
+                    <img src="" alt="" id="product-main-image" />
+                </div>
+            </div>
+
+            <div class="product-details__info">
+                <h1 class="product-details__title" id="product-title"></h1>
+
+                <div class="product-details__rating">
+                    <span
+                        class="product-details__rating-stars"
+                        id="product-rating-stars"
+                    ></span>
+
+                    <span
+                        class="product-details__rating-value"
+                        id="product-rating-value"
+                    ></span>
+                </div>
+
+                <div class="product-details__price">
+                    <span
+                        class="product-details__current-price"
+                        id="product-price"
+                    ></span>
+
+                    <span
+                        class="product-details__old-price"
+                        id="product-old-price"
+                    ></span>
+
+                    <span
+                        class="product-details__discount"
+                        id="product-discount"
+                    ></span>
+                </div>
+
+                <p
+                    class="product-details__description"
+                    id="product-description"
+                ></p>
+
+                <hr class="product-details__divider" />
+
+                <div class="product-details__option">
+                    <p class="product-details__option-title">Select Colors</p>
+
+                    <div class="product-details__colors">
+                        <button
+                            class="product-details__color product-details__color--brown active"
+                        >
+                            <span>✓</span>
+                        </button>
+
+                        <button
+                            class="product-details__color product-details__color--green"
+                        ></button>
+
+                        <button
+                            class="product-details__color product-details__color--blue"
+                        ></button>
+                    </div>
+                </div>
+
+                <hr class="product-details__divider" />
+
+                <div class="product-details__option">
+                    <p class="product-details__option-title">Choose Size</p>
+
+                    <div class="product-details__sizes">
+                        <button class="product-details__size">Small</button>
+
+                        <button class="product-details__size">Medium</button>
+
+                        <button class="product-details__size active">
+                            Large
+                        </button>
+
+                        <button class="product-details__size">X-Large</button>
+                    </div>
+                </div>
+
+                <hr class="product-details__divider" />
+
+                <div class="product-details__actions">
+                    <div class="product-details__quantity">
+                        <button type="button" id="quantity-decrease">−</button>
+
+                        <span id="quantity-value"> 1 </span>
+
+                        <button type="button" id="quantity-increase">+</button>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="product-details__add-to-cart btn"
+                        id="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <section class="product-card-section product-card-section2">
+            <h1 class="product-card-section__heading">YOU MIGHT ALSO LIKE</h1>
+
+            <div class="product-card__grid product-card__grid3">
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="" alt="" />
+                    </div>
+                    <h4 class="product-card__title"></h4>
+                    <div class="product-card__rating"></div>
+                    <div class="product-card__price"></div>
+                </article>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <!-- Newsletter -->
+            <section class="newsletter">
+                <div class="newsletter__content">
+                    <h2 class="newsletter__heading">
+                        STAY UPTO DATE ABOUT<br />
+                        OUR LATEST OFFERS
+                    </h2>
+
+                    <form class="newsletter__form">
+                        <div class="newsletter__input">
+                            <span class="newsletter__icon">✉</span>
+
+                            <input
+                                type="email"
+                                class="newsletter__input-field"
+                                placeholder="Enter your email address"
+                            />
+                        </div>
+
+                        <button type="submit" class="newsletter__button">
+                            Subscribe to Newsletter
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <h2 class="footer__logo">SHOP.CO</h2>
+
+                    <p class="footer__description">
+                        We have clothes that suits your style and which you're
+                        proud to wear. From women to men.
+                    </p>
+
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social"
+                            ><img
+                                src="./assets/icons/social-icons/logo-twitter 2.svg"
+                                alt="twitter-icon"
+                        /></a>
+                        <a href="#" class="footer__social facebook"
+                            ><img
+                                src="./assets/icons/social-icons/Group.svg"
+                                alt="facebook-icon"
+                        /></a>
+                        <a href="#" class="footer__social"
+                            ><img
+                                src="./assets/icons/social-icons/logo-instagram 1.svg"
+                                alt="insta-icon"
+                        /></a>
+                        <a href="#" class="footer__social"
+                            ><img
+                                src="./assets/icons/social-icons/Group (1).svg"
+                                alt="reddit-icon"
+                        /></a>
+                    </div>
+                </div>
+
+                <!-- Company -->
+                <div class="footer__column">
+                    <h3 class="footer__title">COMPANY</h3>
+
+                    <a href="#" class="footer__link">About</a>
+                    <a href="#" class="footer__link">Features</a>
+                    <a href="#" class="footer__link">Works</a>
+                    <a href="#" class="footer__link">Career</a>
+                </div>
+
+                <!-- Help -->
+                <div class="footer__column">
+                    <h3 class="footer__title">HELP</h3>
+
+                    <a href="#" class="footer__link">Customer Support</a>
+                    <a href="#" class="footer__link">Delivery Details</a>
+                    <a href="#" class="footer__link">Terms &amp; Conditions</a>
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                </div>
+
+                <!-- FAQ -->
+                <div class="footer__column">
+                    <h3 class="footer__title">FAQ</h3>
+
+                    <a href="#" class="footer__link">Account</a>
+                    <a href="#" class="footer__link">Manage Deliveries</a>
+                    <a href="#" class="footer__link">Orders</a>
+                    <a href="#" class="footer__link">Payments</a>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer__column">
+                    <h3 class="footer__title">RESOURCES</h3>
+
+                    <a href="#" class="footer__link">Free eBooks</a>
+                    <a href="#" class="footer__link">Development Tutorial</a>
+                    <a href="#" class="footer__link">How to - Blog</a>
+                    <a href="#" class="footer__link">Youtube Playlist</a>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    Shop.co © 2000-2023, All Rights Reserved
+                </p>
+
+                <div class="footer__payments">
+                    <span class="footer__payment"
+                        ><img
+                            src="./assets/icons/social-icons/paymenticons/Visa.svg"
+                            alt="visa"
+                    /></span>
+                    <span class="footer__payment"
+                        ><img
+                            src="./assets/icons/social-icons/paymenticons/Mastercard.svg"
+                            alt="Mastercard"
+                    /></span>
+                    <span class="footer__payment"
+                        ><img
+                            src="./assets/icons/social-icons/paymenticons/Paypal.svg"
+                            alt="Paypal"
+                    /></span>
+                    <span class="footer__payment"
+                        ><img
+                            src="./assets/icons/social-icons/paymenticons/ Pay.svg"
+                            alt="applepay"
+                    /></span>
+                    <span class="footer__payment"
+                        ><img
+                            src="./assets/icons/social-icons/paymenticons/G Pay.svg"
+                            alt="gpay"
+                    /></span>
+                </div>
+            </div>
+        </footer>
+
+        <script type="module" src="./js/products.js"></script>
+        <script type="module" src="./js/main.js"></script>
+        <script type="module" src="./js/product-details.js"></script>
+    </body>
+</html>
