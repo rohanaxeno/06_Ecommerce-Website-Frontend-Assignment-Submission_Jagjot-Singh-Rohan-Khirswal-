@@ -606,108 +606,107 @@
             font-size: f.rem(12px);
         }
     }
-    @media (max-width: 390px) {
-        .reviews {
-            margin: f.rem(30px) auto;
 
-            &__tabs {
-                margin: 0 f.rem(8px);
-            }
+    .reviews {
+        margin: f.rem(30px) auto;
 
-            &__tab {
-                padding: f.rem(12px) f.rem(4px);
-                font-size: f.rem(12px);
-            }
-
-            &__top {
-                margin: f.rem(16px) 0;
-                justify-content: space-around;
-            }
-
-            &__heading {
-                gap: f.rem(4px);
-            }
-
-            &__heading h2 {
-                font-size: f.rem(14px);
-            }
-
-            &__heading span {
-                font-size: f.rem(10px);
-            }
-
-            &__actions {
-                gap: f.rem(6px);
-            }
-
-            &__filter {
-                width: f.rem(30px);
-                height: f.rem(30px);
-            }
-
-            &__filter img {
-                width: f.rem(14px);
-                height: f.rem(14px);
-            }
-
-            &__sort {
-                display: none;
-            }
-
-            &__write {
-                height: f.rem(30px);
-                padding: 0 f.rem(14px);
-                font-size: f.rem(10px);
-            }
-
-            &__list {
-                grid-template-columns: 1fr;
-                gap: f.rem(10px);
-            }
-
-            &__load {
-                margin-top: f.rem(16px);
-                padding: f.rem(10px) f.rem(24px);
-                font-size: f.rem(11px);
-            }
+        &__tabs {
+            margin: 0 f.rem(8px);
         }
 
-        .review {
-            width: 80%;
-            margin: 0 auto;
-            min-height: auto;
-            padding: f.rem(16px);
-            border-radius: f.rem(12px);
+        &__tab {
+            padding: f.rem(12px) f.rem(4px);
+            font-size: f.rem(12px);
+        }
 
-            &__stars {
-                font-size: f.rem(15px);
-            }
+        &__top {
+            margin: f.rem(16px) 0;
+            justify-content: space-around;
+        }
 
-            &__name {
-                margin-top: f.rem(6px);
-                font-size: f.rem(12px);
-            }
+        &__heading {
+            gap: f.rem(4px);
+        }
 
-            &__name span {
-                width: f.rem(11px);
-                height: f.rem(11px);
-                margin-left: f.rem(3px);
-                font-size: f.rem(7px);
-            }
+        &__heading h2 {
+            font-size: f.rem(14px);
+        }
 
-            &__text {
-                margin: f.rem(8px) 0 f.rem(12px);
-                font-size: f.rem(10px);
-                line-height: 1.45;
-            }
+        &__heading span {
+            font-size: f.rem(10px);
+        }
 
-            &__date {
-                font-size: f.rem(9px);
-            }
+        &__actions {
+            gap: f.rem(6px);
+        }
 
-            &__more {
-                font-size: f.rem(12px);
-            }
+        &__filter {
+            width: f.rem(30px);
+            height: f.rem(30px);
+        }
+
+        &__filter img {
+            width: f.rem(14px);
+            height: f.rem(14px);
+        }
+
+        &__sort {
+            display: none;
+        }
+
+        &__write {
+            height: f.rem(30px);
+            padding: 0 f.rem(14px);
+            font-size: f.rem(10px);
+        }
+
+        &__list {
+            grid-template-columns: 1fr;
+            gap: f.rem(10px);
+        }
+
+        &__load {
+            margin-top: f.rem(16px);
+            padding: f.rem(10px) f.rem(24px);
+            font-size: f.rem(11px);
+        }
+    }
+
+    .review {
+        width: 80%;
+        margin: 0 auto;
+        min-height: auto;
+        padding: f.rem(16px);
+        border-radius: f.rem(12px);
+
+        &__stars {
+            font-size: f.rem(15px);
+        }
+
+        &__name {
+            margin-top: f.rem(6px);
+            font-size: f.rem(12px);
+        }
+
+        &__name span {
+            width: f.rem(11px);
+            height: f.rem(11px);
+            margin-left: f.rem(3px);
+            font-size: f.rem(7px);
+        }
+
+        &__text {
+            margin: f.rem(8px) 0 f.rem(12px);
+            font-size: f.rem(10px);
+            line-height: 1.45;
+        }
+
+        &__date {
+            font-size: f.rem(9px);
+        }
+
+        &__more {
+            font-size: f.rem(12px);
         }
     }
 }

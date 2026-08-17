@@ -28,13 +28,13 @@ a {
 
 @font-face {
   font-family: "Integral CF";
-  src: url("/assets/fonts/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
+  src: url("./assets/fonts/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
   font-weight: 700;
   font-style: Bold;
 }
 @font-face {
   font-family: "Satoshi";
-  src: url("/assets/fonts/Satoshi-Variable.ttf") format(truetype);
+  src: url("./assets/fonts/Satoshi-Variable.ttf") format(truetype);
 }
 .btn, .btn-secondary {
   width: 13.125rem;
@@ -1611,8 +1611,6 @@ a {
     height: 2.75rem;
     font-size: 0.75rem;
   }
-}
-@media (max-width: 390px) and (max-width: 390px) {
   .reviews {
     margin: 1.875rem auto;
   }
