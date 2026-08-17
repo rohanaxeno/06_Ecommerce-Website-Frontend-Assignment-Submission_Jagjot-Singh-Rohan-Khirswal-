@@ -1,0 +1,80 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins" as m;
+@use "../abstracts/funcions" as f;
+
+.login {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: f.rem(20px);
+
+    background-color: variables.$bg-color-card;
+
+    &__box {
+        width: 100%;
+        max-width: f.rem(400px);
+
+        padding: f.rem(40px);
+
+        border-radius: f.rem(20px);
+
+        background-color: variables.$color-white;
+    }
+
+    &__title {
+        margin-bottom: f.rem(30px);
+        font-family: variables.$font-primary;
+        font-size: f.rem(32px);
+        font-weight: 700;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: f.rem(20px);
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: f.rem(8px);
+        font-family: variables.$font-secondary;
+        font-size: f.rem(14px);
+    }
+
+    &__input {
+        width: 100%;
+        height: f.rem(48px);
+        box-sizing: border-box;
+        padding: 0 f.rem(16px);
+        border: 1px solid variables.$color-light-gray;
+        border-radius: f.rem(24px);
+        outline: none;
+
+        font-size: f.rem(14px);
+    }
+
+    &__message {
+        margin: 0;
+
+        font-family: variables.$font-secondary;
+        font-size: f.rem(13px);
+    }
+
+    &__button {
+        width: 100%;
+        height: f.rem(48px);
+
+        border: none;
+        border-radius: f.rem(24px);
+
+        background-color: variables.$color-black;
+        color: variables.$color-white;
+
+        font-size: f.rem(14px);
+        cursor: pointer;
+    }
+}

@@ -23,7 +23,7 @@ const minusButton = document.querySelector("#quantity-decrease");
 const plusButton = document.querySelector("#quantity-increase");
 const quantityValue = document.querySelector("#quantity-value");
 const addToCartButton = document.querySelector(".product-details__add-to-cart");
-
+const cartIcon = document.querySelector(".header__cart-icon");
 function starGenerator(rating) {
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
@@ -155,4 +155,8 @@ addToCartButton.addEventListener("click", () => {
     localStorage.setItem("cart", JSON.stringify(cart));
 
     alert("Product added to cart!");
+});
+
+cartIcon.addEventListener("click", () => {
+    window.location.href = "cart.html";
 });

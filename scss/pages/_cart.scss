@@ -28,6 +28,7 @@
     }
 
     &__summary {
+        font-family: variables.$font-secondary;
         border: 1px solid variables.$color-light-gray;
         border-radius: f.rem(20px);
         padding: f.rem(24px);
@@ -36,7 +37,7 @@
     &__summary-title {
         margin: 0 0 f.rem(24px);
 
-        font-family: variables.$font-primary;
+        font-family: variables.$font-secondary;
         font-size: f.rem(24px);
         line-height: 1;
         font-weight: 700;
@@ -233,9 +234,9 @@
 
     &__name {
         margin: 0 0 f.rem(8px);
-        font-family: variables.$font-primary;
-        font-size: f.rem(18px);
-        font-weight: 600;
+        font-family: variables.$font-secondary;
+        font-size: f.rem(20px);
+        font-weight: 7600;
     }
 
     &__size,
@@ -315,6 +316,7 @@
         }
 
         &__summary-title {
+            font-family: variables.$font-secondary;
             margin-bottom: f.rem(20px);
             font-size: f.rem(20px);
         }

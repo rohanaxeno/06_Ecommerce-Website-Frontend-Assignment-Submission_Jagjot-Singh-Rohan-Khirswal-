@@ -15,7 +15,7 @@ const couponMessage = document.querySelector(".cart__coupon-message");
 const checkoutButton = document.querySelector(".cart__checkout");
 const successBox = document.querySelector(".cart__success");
 const closeButton = document.querySelector(".cart__success-close");
-
+const cartIcon = document.querySelector(".header__cart-icon");
 const deliveryFee = 15;
 
 const coupons = {
@@ -204,3 +204,7 @@ closeButton.addEventListener("click", () => {
 });
 
 showCart();
+
+cartIcon.addEventListener("click", () => {
+    window.location.href = "cart.html";
+});

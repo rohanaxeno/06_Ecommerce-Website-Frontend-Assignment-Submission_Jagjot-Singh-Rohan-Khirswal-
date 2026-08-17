@@ -98,7 +98,7 @@
     }
 
     &__current-price {
-        font-family: variables.$font-primary;
+        font-family: variables.$font-secondary;
         font-size: f.rem(32px);
         font-weight: 700;
     }
@@ -347,6 +347,7 @@
 
     .product-details__current-price,
     .product-details__old-price {
+        font-family: variables.$font-secondary;
         font-size: f.rem(24px);
     }
 

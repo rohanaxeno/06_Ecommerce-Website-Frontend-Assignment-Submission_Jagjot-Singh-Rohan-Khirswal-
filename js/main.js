@@ -3,7 +3,7 @@ import { products } from "./products.js";
 const productGrid = document.querySelector(".product-card__grid");
 const productGrid2 = document.querySelector(".product-card__grid2");
 const productGrid3 = document.querySelector(".product-card__grid3");
-
+const cartIcon = document.querySelector(".header__cart-icon");
 const viewAll = document.querySelector(".product-card-section__viewAllButton1");
 const viewAll2 = document.querySelector(
     ".product-card-section__viewAllButton2",
@@ -104,3 +104,7 @@ if (productGrid2) {
 if (productGrid3) {
     renderProducts(productGrid3, 2, 6);
 }
+
+cartIcon.addEventListener("click", () => {
+    window.location.href = "cart.html";
+});

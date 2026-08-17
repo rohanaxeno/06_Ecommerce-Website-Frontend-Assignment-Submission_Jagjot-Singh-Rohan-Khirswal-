@@ -23,3 +23,23 @@
     background: transparent;
     color: variables.$color-black;
 }
+
+.logout {
+    padding: f.rem(10px) f.rem(10px);
+    border: none;
+    border-radius: f.rem(20px);
+
+    background-color: variables.$color-black;
+    color: variables.$color-white;
+
+    font-family: variables.$font-secondary;
+    font-size: f.rem(14px);
+
+    cursor: pointer;
+}
+
+#quantity-increase,
+#quantity-decrease {
+    border: none;
+    font-size: f.rem(20px);
+}
