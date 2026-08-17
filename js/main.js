@@ -16,11 +16,11 @@ function starGenerator(rating) {
     let stars = "";
 
     for (let i = 0; i < fullStars; i++) {
-        stars += "⭐";
+        stars += "★";
     }
 
     if (hasHalfStar) {
-        stars += "⭐";
+        stars += "⯪";
     }
 
     return stars;

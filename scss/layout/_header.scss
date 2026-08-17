@@ -1,36 +1,44 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins" as m;
 @use "../abstracts/funcions" as f;
-.header__nav-primary {
-    position: relative;
-    width: 100%;
-    height: f.rem(38px);
-    background-color: variables.$color-black;
-    font-family: variables.$font-secondary;
-    color: white;
-    @include m.flex(row, center);
+.header {
+    &__nav-primary {
+        position: relative;
+        width: 100%;
+        height: f.rem(38px);
+        background-color: variables.$color-black;
+        font-family: variables.$font-secondary;
+        color: white;
+        @include m.flex(row, center);
+    }
 
-    .header__nav-container {
+    &__nav-container {
         height: f.rem(19px);
         @include m.flex(row, space-between);
         font-size: f.rem(14px);
         font-weight: 400;
     }
-    .header__nav-icon {
+    &__nav-icon {
         position: absolute;
         right: 6.8rem;
     }
-    .header__nav-content {
+    &__nav-content {
         text-decoration: underline;
     }
-}
 
-.header__nav-secondary {
-    width: 100%;
-    height: f.rem(96px);
-    @include m.flex(row, center);
+    &__nav-secondary {
+        width: 100%;
+        height: f.rem(96px);
+        @include m.flex(row, center);
+        &-container {
+            width: f.rem(1240px);
+            height: f.rem(48px);
+            @include m.flex(row, space-evenly, center);
+            gap: f.rem(40px);
+        }
+    }
 
-    .header__nav-mobile-icon {
+    &__nav-mobile-icon {
         display: none;
         font-family: variables.$font-primary;
         font-size: f.rem(32px);
@@ -43,13 +51,7 @@
         padding-bottom: 0.5rem;
     }
 
-    &-container {
-        width: f.rem(1240px);
-        height: f.rem(48px);
-        @include m.flex(row, space-evenly, center);
-        gap: f.rem(40px);
-    }
-    .header__nav-links {
+    &__nav-links {
         width: f.rem(350px);
         margin: 0;
         padding: 0;
@@ -96,7 +98,7 @@
         }
     }
 
-    .header__nav-secondary-icons {
+    &__nav-secondary-icons {
         width: f.rem(62px);
         height: f.rem(24px);
         margin-left: f.rem(40px);
@@ -113,31 +115,36 @@
     .header__nav-primary {
         width: 100%;
         height: f.rem(34px);
-
-        .header__nav-container {
+    }
+    .header {
+        &__nav-container {
             height: f.rem(16px);
             font-size: f.rem(12px);
             @include m.flex(row, center);
         }
-        .header__nav-icon {
+        &__nav-icon {
             display: none;
         }
-    }
+        &__nav-secondary {
+            height: f.rem(64px);
 
-    .header__nav-secondary {
-        height: f.rem(64px);
+            &-container {
+                justify-content: flex-start;
+                gap: f.rem(16px);
+            }
 
-        &-container {
-            gap: 0;
+            .search {
+                display: none;
+            }
         }
-        .header__nav-links {
+        &__nav-links {
             display: none;
         }
-        .search {
-            display: none;
-        }
-        .header__nav-mobile-icon {
+        &__nav-mobile-icon {
             display: block;
+        }
+        &__nav-secondary-icons {
+            margin-left: 0;
         }
     }
 }

@@ -19,7 +19,7 @@
     @extend .btn;
     width: f.rem(218px);
     height: f.rem(52px);
-    border: 1px solid #00000020;
+    border: 1px solid variables.$border-color-black;
     background: transparent;
     color: variables.$color-black;
 }

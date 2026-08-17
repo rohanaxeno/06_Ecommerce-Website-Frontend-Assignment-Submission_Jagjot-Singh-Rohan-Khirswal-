@@ -2,7 +2,6 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let coupon = null;
 
 const cartItems = document.querySelector(".cart__items");
-
 const subtotal = document.querySelector(".cart__subtotal");
 const discount = document.querySelector(".cart__discount");
 const delivery = document.querySelector(".cart__delivery");
