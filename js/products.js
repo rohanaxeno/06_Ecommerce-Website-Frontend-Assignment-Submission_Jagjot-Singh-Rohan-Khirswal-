@@ -1,3 +1,5 @@
+const basePath =
+    "/06_Ecommerce-Website-Frontend-Assignment-Submission_Jagjot-Singh-Rohan-Khirswal";
 export const products = [
     {
         id: 1,
@@ -7,7 +9,7 @@ export const products = [
         discount: null,
         rating: 4.5,
         category: "T-Shirts",
-        image: "./assets/images/products/image 7.png",
+        image: `${basePath}/assets/images/products/image 7.png`,
         description:
             "A comfortable and stylish t-shirt designed for everyday wear.",
     },
@@ -20,7 +22,7 @@ export const products = [
         discount: 20,
         rating: 3.5,
         category: "Jeans",
-        image: "./assets/images/products/image 8.png",
+        image: `${basePath}/assets/images/products/image 8.png`,
         description:
             "Modern skinny fit jeans designed for a sleek and comfortable look.",
     },
@@ -33,7 +35,7 @@ export const products = [
         discount: null,
         rating: 4.5,
         category: "Shirts",
-        image: "./assets/images/products/image 9.png",
+        image: `${basePath}/assets/images/products/image 9.png`,
         description:
             "A classic checkered shirt that combines comfort with a timeless style.",
     },
@@ -46,7 +48,7 @@ export const products = [
         discount: 30,
         rating: 4.5,
         category: "T-Shirts",
-        image: "./assets/images/products/image 10.png",
+        image: `${basePath}/assets/images/products/image 10.png`,
         description:
             "A casual striped t-shirt with a comfortable fit and modern design.",
     },
@@ -59,7 +61,7 @@ export const products = [
         discount: 40,
         rating: 4.5,
         category: "T-Shirts",
-        image: "./assets/images/products/image 1.png",
+        image: `${basePath}/assets/images/products/image 1.png`,
         description:
             "This graphic t-shirt is crafted from soft and breathable fabric for superior comfort and style.",
     },
@@ -72,7 +74,7 @@ export const products = [
         discount: null,
         rating: 3.5,
         category: "T-Shirts",
-        image: "./assets/images/products/image 8 (1).png",
+        image: `${basePath}/assets/images/products/image 8 (1).png`,
         description:
             "A colorful graphic t-shirt featuring a unique gradient design.",
     },
@@ -85,7 +87,7 @@ export const products = [
         discount: null,
         rating: 4.5,
         category: "Shirts",
-        image: "./assets/images/products/image 9 (1).png",
+        image: `${basePath}/assets/images/products/image 9 (1).png`,
         description: "A classic polo shirt featuring stylish tipping details.",
     },
 
@@ -97,7 +99,7 @@ export const products = [
         discount: 30,
         rating: 5,
         category: "T-Shirts",
-        image: "./assets/images/products/image 10 (1).png",
+        image: `${basePath}/assets/images/products/image 10 (1).png`,
         description:
             "A modern black striped t-shirt designed for a clean casual look.",
     },
