@@ -28,13 +28,13 @@ a {
 
 @font-face {
   font-family: "Integral CF";
-  src: url("./assets/fonts/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
+  src: url("/assets/fonts/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
   font-weight: 700;
   font-style: Bold;
 }
 @font-face {
   font-family: "Satoshi";
-  src: url("./assets/fonts/Satoshi-Variable.ttf") format(truetype);
+  src: url("/assets/fonts/Satoshi-Variable.ttf") format(truetype);
 }
 .btn, .btn-secondary {
   width: 13.125rem;
@@ -1711,6 +1711,7 @@ a {
   grid-template-columns: 1.6fr 1fr;
   gap: 1.25rem;
   align-items: start;
+  margin-bottom: 2rem;
 }
 .cart__items {
   border: 1px solid rgba(0, 0, 0, 0.6);
@@ -1918,6 +1919,10 @@ a {
 }
 .cart-item__quantity-value {
   font-size: 0.875rem;
+}
+
+.newsletter {
+  top: -2rem;
 }
 
 @media (max-width: 390px) {

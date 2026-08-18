@@ -108,3 +108,21 @@ if (productGrid3) {
 cartIcon.addEventListener("click", () => {
     window.location.href = "cart.html";
 });
+
+function updateCartCount() {
+    const cartCount = document.querySelector(".cart-count");
+
+    if (!cartCount) return;
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let count = 0;
+
+    cart.forEach((item) => {
+        count += item.quantity;
+    });
+
+    cartCount.textContent = count;
+}
+
+updateCartCount();

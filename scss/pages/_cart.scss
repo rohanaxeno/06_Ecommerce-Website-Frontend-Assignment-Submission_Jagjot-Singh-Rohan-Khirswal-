@@ -19,6 +19,7 @@
         grid-template-columns: 1.6fr 1fr;
         gap: f.rem(20px);
         align-items: start;
+        margin-bottom: 2rem;
     }
 
     &__items {
@@ -287,6 +288,9 @@
     &__quantity-value {
         font-size: f.rem(14px);
     }
+}
+.newsletter {
+    top: -2rem;
 }
 
 @media (max-width: 390px) {
